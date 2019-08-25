@@ -9,7 +9,7 @@ RUN cd /tmp \
 	&& git clone https://github.com/xebd/accel-ppp.git accel-ppp-code \
 	&& mkdir /tmp/accel-ppp-code/build \
 	&& cd /tmp/accel-ppp-code/build \
-	&& cmake  -DLOG_PGSQL=FALSE -DRADIUS=FALSE -DSHAPER=FALSE -DNETSNMP=FALSE  -DBUILD_IPOE_DRIVER=FALSE -DBUILD_VLAN_MON_DRIVER=FALSE -DLUA=FALSE -DKDIR=/usr/src/linux-headers-`uname -r` -DCPACK_TYPE=Ubuntu18  .. \
+	&& cmake  -DLOG_PGSQL=FALSE -DRADIUS=TRUE -DSHAPER=FALSE -DNETSNMP=FALSE  -DBUILD_IPOE_DRIVER=FALSE -DBUILD_VLAN_MON_DRIVER=FALSE -DLUA=FALSE -DKDIR=/usr/src/linux-headers-`uname -r` -DCPACK_TYPE=Ubuntu16  .. \
 	&& make \
 	&& make install \
 	&& rm -rf /tmp/accel-ppp-code
